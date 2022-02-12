@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  yukkimusic:
+    build: .
+    container_name: yukkimusic
+    environment:
+      - PUID=0
+      - PGID=0
+      - TZ=Asia/Jakarta
+    ports:
+      - 8080:8080
+    restart: unless-stopped
