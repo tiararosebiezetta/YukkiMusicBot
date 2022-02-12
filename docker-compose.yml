@@ -4,9 +4,20 @@ services:
     build: .
     container_name: yukkimusic
     environment:
-      - PUID=0
-      - PGID=0
-      - TZ=Asia/Jakarta
+      - API_ID=${API_ID}
+      - API_HASH=${API_HASH}
+      - BOT_TOKEN=${BOT_TOKEN}
+      - DURATION_LIMIT=${DURATION_LIMIT}
+      - ASSISTANT_PREFIX=${ASSISTANT_PREFIX}
+      - MUSIC_BOT_NAME=${MUSIC_BOT_NAME}
+      - MONGO_DB_URI=${MONGO_DB_URI}
+      - OWNER_ID=${OWNER_ID}
+      - STRING_SESSION1=${STRING_SESSION1}
+      - LOG_GROUP_ID=${LOG_GROUP_ID}
+      - SUDO_USERS=${SUDO_USERS}
+      - LOG_SESSION=${LOG_SESSION}
+      - UPSTREAM_REPO=${UPSTREAM_REPO}
+      - UPSTREAM_BRANCH=${UPSTREAM_BRANCH}
     ports:
       - 8080:8080
     restart: unless-stopped
